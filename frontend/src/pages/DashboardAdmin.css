@@ -1,0 +1,256 @@
+/* DashboardAdmin.css */
+
+/* Dark Mode Dashboard */
+.admin-container {
+  background-color: #0f111a;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #e5e7eb;
+}
+
+.admin-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f5c219;
+  /* Gold accent */
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(245, 194, 25, 0.3);
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  background: #1e2230;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #2d3748;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  /* Darker shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  border-color: #f5c219;
+}
+
+.stat-card h3 {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-card p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.text-red {
+  color: #f87171 !important;
+}
+
+.text-green {
+  color: #34d399 !important;
+}
+
+.text-gray {
+  color: #9ca3af !important;
+}
+
+/* Charts Section */
+.charts-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  background: #1e2230;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #2d3748;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.chart-card h3 {
+  margin-bottom: 1.5rem;
+  color: #e5e7eb;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 0.5rem;
+}
+
+.chart-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 1024px) {
+  .charts-section {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card.wide {
+    grid-column: span 1;
+  }
+}
+
+/* Ticket Table */
+.ticket-list-container {
+  overflow-x: auto;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  color: #d1d5db;
+}
+
+.ticket-table th,
+.ticket-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #374151;
+  /* Dark border */
+}
+
+.ticket-table th {
+  background-color: #111827;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.ticket-table tr:hover {
+  background-color: #2d3748;
+  /* Hover effect */
+}
+
+/* Badges */
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.priority-low {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid #059669;
+}
+
+.priority-medium {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid #d97706;
+}
+
+.priority-high {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border: 1px solid #dc2626;
+}
+
+.priority-urgent {
+  background-color: rgba(185, 28, 28, 0.3);
+  color: #fca5a5;
+  border: 1px solid #ef4444;
+  box-shadow: 0 0 5px #ef4444;
+}
+
+.status-OPEN {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid #2563eb;
+}
+
+.status-IN_PROGRESS {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
+  border: 1px solid #7c3aed;
+}
+
+.status-RESOLVED {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid #059669;
+}
+
+.status-CLOSED {
+  background-color: #374151;
+  color: #9ca3af;
+  border: 1px solid #4b5563;
+}
+
+/* Inputs & Buttons */
+.assign-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.assign-input {
+  padding: 0.5rem;
+  background-color: #111827;
+  border: 1px solid #4b5563;
+  color: #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  width: 140px;
+}
+
+.assign-input::placeholder {
+  color: #6b7280;
+}
+
+.assign-input:focus {
+  outline: none;
+  border-color: #f5c219;
+}
+
+.assign-btn {
+  background-color: #f5c219;
+  color: #111827;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.assign-btn:hover {
+  background-color: #d97706;
+  transform: scale(1.05);
+}
+
+.unassigned {
+  color: #6b7280;
+  font-style: italic;
+}
